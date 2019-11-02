@@ -1,0 +1,62 @@
+@import url(https://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(https://fonts.googleapis.com/earlyaccess/hanna.css);
+*{
+	font-family : 'Nanum Gothic';
+}
+h1 {
+	font-family : 'Hanna';
+}
+body {
+	background : no-repeat right center fixed;
+	background-image : url("../images/cctv.jpg");
+	background-size : cover;
+}
+.navbar-brand {
+	font-family : 'Hanna';
+}
+#substring {
+	font-size : 12px;
+}
+#questionstring {
+	font-size : 15px;
+}
+#checkstring {
+	font-size : 15px;
+}
+.jumbotron{
+	color : white;
+	background-color: rgba( 0, 0, 0, 0.5 );
+}
+.row{
+	color : white;
+}
+.table{
+	background-color: rgba( 0, 0, 0, 0.1 );
+	text-align: center;	
+}
+thead{
+	background-color: rgba( 0, 0, 0, 0.6 );
+	font-weight: bold;
+}
+th{
+	text-align: center;	
+}
+.form-control{
+	background-color:rgba( 255, 255, 255, 0.1 );
+	color: white;	
+	border: none;
+}
+iframe{
+	border-radius: 5px;
+}
+select::-ms-expand { display: none; }
+select{
+	appearance: none;
+	-webkit-appearance: none;
+	
+	width: 100%;
+	color: black;
+	padding: .3em .3em;
+	font-family: inherit;
+	border: none;
+}

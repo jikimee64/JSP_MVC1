@@ -5,14 +5,28 @@
   Time: 오후 11:38
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$SSASDDSA
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/custom.css">
+  <title>캡스톤디자인프로젝트</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148884809-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-148884809-2');
+  </script>
+</head>
+<body>
+<script>
+  location.href = 'login.jsp';
+</script>
+</body>
 </html>
-S
