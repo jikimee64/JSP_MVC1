@@ -7,22 +7,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc3481c4-f097-4017-b413-a9fdcd196943" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/css/bootstrap-theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/css/custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/images/cctv.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/join.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/js/npm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/activation.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/activation.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/commons-codec-1.9.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/mail.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/mysql-connector-java-8.0.16.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/simplecaptcha-1.2.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/user/UserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/user/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/DatabaseUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/Gmail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/util/SHA256.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/emailCheckAction.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/emailSendAction.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/emailSendConfirm.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/info.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/joinAction.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/loginAction.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/logoutAction.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/main.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/removeAction.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/update.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/updateAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dontcallme_JSP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/dontcallme_JSP.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/WEB-INF/classes/example/HelloWorld.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/join.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/join.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dontcallme_JSP/example/HelloWorld.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/example/HelloWorld.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/join.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/join.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +49,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="jsf" />
+        <option value="Class" />
         <option value="Jsp File" />
       </list>
     </option>
@@ -48,19 +66,33 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectId" id="1Sva2BFL4Z3xcGEpKMl8Le64fZX" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SpringMavenProject_XML" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.16699219" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\kimwoocheol\PersonelStudy\IntelliJ\dontcallme_JSP(Portfolio)\lib" />
+      <recent name="D:\kimwoocheol\PersonelStudy\IntelliJ\dontcallme_JSP\src\user" />
+      <recent name="D:\kimwoocheol\PersonelStudy\IntelliJ\dontcallme_JSP\src\example" />
       <recent name="D:\kimwoocheol\PersonelStudy\IntelliJ\dontcallme_JSP\web\images" />
       <recent name="D:\kimwoocheol\PersonelStudy\IntelliJ\dontcallme_JSP\web\fonts" />
-      <recent name="D:\kimwoocheol\PersonelStudy\IntelliJ\dontcallme_JSP\web\js" />
-      <recent name="D:\kimwoocheol\PersonelStudy\IntelliJ\dontcallme_JSP\web\css" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="util" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\kimwoocheol\PersonelStudy\IntelliJ\dontcallme_JSP(Portfolio)\web" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -171,7 +203,23 @@
       <workItem from="1572535898898" duration="1608000" />
       <workItem from="1572625454678" duration="724000" />
       <workItem from="1572669931612" duration="3263000" />
-      <workItem from="1572705465267" duration="764000" />
+      <workItem from="1572705465267" duration="1922000" />
+      <workItem from="1572762366694" duration="3000" />
+      <workItem from="1572876065427" duration="1301000" />
+      <workItem from="1572964140846" duration="734000" />
+      <workItem from="1573124645659" duration="981000" />
+      <workItem from="1573125978199" duration="2510000" />
+      <workItem from="1573219248921" duration="1995000" />
+      <workItem from="1573307058624" duration="1337000" />
+      <workItem from="1573449247686" duration="2635000" />
+      <workItem from="1573453278308" duration="107000" />
+      <workItem from="1573453481645" duration="1045000" />
+      <workItem from="1573485307439" duration="2741000" />
+      <workItem from="1573524339431" duration="1028000" />
+      <workItem from="1573615858491" duration="3018000" />
+      <workItem from="1573726902492" duration="2997000" />
+      <workItem from="1573882114931" duration="3240000" />
+      <workItem from="1573914461199" duration="575000" />
     </task>
     <servers />
   </component>
@@ -190,5 +238,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

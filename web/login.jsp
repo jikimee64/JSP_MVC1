@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: wlsgm
-  Date: 2019-11-02
-  Time: 오후 2:37
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <%@ page import="java.net.URLEncoder" %>
@@ -22,9 +15,29 @@
     <link rel="stylesheet" href="css/custom.css">
     <title>캡스톤디자인프로젝트</title>
 
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script type="text/javascript"> /* 서브밋 전에 리캡챠 체크 여부 를 확인합니다. */
+    function FormSubmit() { if (grecaptcha.getResponse() == "")
+    {
+        alert("리캡챠를 체크해야 합니다."); return false; } else { return true;
+    }
+    }
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148884809-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-148884809-2');
+    </script>
+
+
+
 </head>
 <body>
-
 <nav class="navbar navbar-default">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed"
@@ -75,18 +88,16 @@
         <center>
             <form method="post" action="loginAction.jsp" onsubmit="return FormSubmit();">
                 <h3 style="text-align: center;">로그인 화면</h3>
+                <br/>
                 <div class="form-group">
                     <input type="text" class="form-control" placeholder="아이디" name="userID" maxlength="20">
                 </div>
                 <div class="form-group">
                     <input type="password" class="form-control" placeholder="비밀번호" name="userPassword" maxlength="20">
                 </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="IP주소" name="userIP" maxlength="50">
-                </div>
                 <input type="submit" class="btn btn-primary form-control" value="로그인"> <br />
                 <br />
-                <div id="html_element" class="g-recaptcha" data-sitekey="6LfcBroUAAAAAMq9QgxvgprKBVxV15KZHIhsQM73"
+                <div id="html_element" class="g-recaptcha" data-sitekey="6LcUGL4UAAAAAHQDXJveqB7FG3uS9ih1mqa2FNF3"
                      style="margin:0 auto;"></div>
             </form>
         </center>
