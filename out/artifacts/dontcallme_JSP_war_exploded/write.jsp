@@ -1,6 +1,20 @@
 <%--
   Created by IntelliJ IDEA.
   User: wlsgm
+  Date: 2019-12-26
+  Time: 오후 9:47
+  To change this template use File | Settings | File Templates.
+--%>
+<%--
+  Created by IntelliJ IDEA.
+  User: wlsgm
+  Date: 2019-12-26
+  Time: 오후 9:34
+  To change this template use File | Settings | File Templates.
+--%>
+<%--
+  Created by IntelliJ IDEA.
+  User: wlsgm
   Date: 2019-11-16
   Time: 오후 2:31
   To change this template use File | Settings | File Templates.
@@ -42,26 +56,11 @@
 <%
 
     String userID = null;
-    String userIP1 = null;
-    String userIP2 = null;
-    String userIP3 = null;
-    String userIP4 = null;
 
     if(session.getAttribute("userID") != null) {
         userID = (String) session.getAttribute("userID");
     }
-    if(session.getAttribute("userIP1") != null) {
-        userIP1 = (String) session.getAttribute("userIP1");
-    }
-    if(session.getAttribute("userIP2") != null) {
-        userIP2 = (String) session.getAttribute("userIP2");
-    }
-    if(session.getAttribute("userIP3") != null) {
-        userIP3 = (String) session.getAttribute("userIP3");
-    }
-    if(session.getAttribute("userIP4") != null) {
-        userIP4 = (String) session.getAttribute("userIP4");
-    }
+
     if(userID == null) {
         PrintWriter script = response.getWriter();
         script.println("<script>");
@@ -83,26 +82,6 @@
         return;
     }
 
-    try (Connection conn = DatabaseUtil.getConnection()) {
-        String sql1 = "select * from CCTV where userID = ?";
-        PreparedStatement pstmt = conn.prepareStatement(sql1);
-
-        Statement stmt = null;
-        pstmt.setString(1, userID);
-        stmt = conn.createStatement();
-        String sql2 = "select * from CCTV where userID = '" + userID + "'";
-        ResultSet rs = stmt.executeQuery(sql2);
-
-        if (rs.next()) {
-            userIP1 = rs.getString("userIP1");
-            userIP2 = rs.getString("userIP2");
-            userIP3 = rs.getString("userIP3");
-            userIP4 = rs.getString("userIP4");
-        }
-    } catch (SQLException e) {
-        e.printStackTrace();
-    }
-
 %>
 
 <nav class="navbar navbar-default">
@@ -118,8 +97,8 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-            <li class="active"><a href="main.jsp">스트리밍 서비스</a></li>
-           <li><a href="bbs.jsp">게시판</a></li>
+            <li><a href="main.jsp">스트리밍 서비스</a></li>
+            <li class="active"><a href="bbs.jsp">게시판</a></li>
         </ul>
         <%
             if(userID == null) {
@@ -155,57 +134,31 @@
         %>
     </div>
 </nav>
+
 <div class="container">
-    <div class="jumbotron">
-        <div class="container">
-            <h1>IoT SSS</h1>
-            <p>IoT 단말기 스트리밍 보안 솔루션</p>
-        </div>
+    <div class="row">
+        <form method="post" action="writeAction.jsp">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th colspan="2">글쓰기</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><input type="text" class="form-control" placeholder="글 제목" name="bbsTitle" maxlength="50"></td>
+                </tr>
+                <tr>
+                    <td><textarea class="form-control" placeholder="글 내용" name="bbsContent" maxlength="2048" style="height: 350px;"></textarea></td>
+                </tr>
+                </tbody>
+            </table>
+            <input type="submit" class="btn btn-primary pull-right" value="글쓰기">
+        </form>
     </div>
 </div>
 
-<div class="container">
-    <div class="jumbotron">
-        <h1><%=userID %>의 ES100V Mini</h1>
-        <br />
-        <br />
 
-        <div class="row" style="text-align:center;">
-            <div class="col-md-6 col-lg-6">
-                <div class="jumbotron" style="padding: 30px;">
-                    <p style="font-weight: bold">Flask Test<br/>
-                        <br/>
-                        <iframe src="http://localhost:5000/" style="  display: block; margin-right: auto; margin-left: auto; overflow-x:hidden; overflow:auto; width:320px; height:300px;" frameborder=0 framespacing=0 marginheight=0 marginwidth=0 vspace=0></iframe>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-6">
-                <div class="jumbotron" style="padding: 30px;">
-                    <p style="font-weight: bold"><%=userIP1 %><br/>
-                        <br/>
-                        <iframe src="http://<%=userIP1 %>:6611/web/admin.html"  style="  display: block; margin-right: auto; margin-left: auto; overflow-x:hidden; overflow:auto; width:320px; height:300px;" frameborder=0 framespacing=0 marginheight=0 marginwidth=0 vspace=0></iframe>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-6">
-                <div class="jumbotron" style="padding: 30px;">
-                    <p style="font-weight: bold"><%=userIP2 %><br/>
-                        <br/>
-                        <iframe src="http://<%=userIP2 %>:6611/web/admin.html"  style="  display: block; margin-right: auto; margin-left: auto; overflow-x:hidden; overflow:auto; width:320px; height:300px;" frameborder=0 framespacing=0 marginheight=0 marginwidth=0 vspace=0></iframe>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-6">
-                <div class="jumbotron" style="padding: 30px;">
-                    <p style="font-weight: bold"><%=userIP3 %><br/>
-                        <br/>
-                        <iframe src="http://<%=userIP3 %>:6611/web/admin.html"  style="  display: block; margin-right: auto; margin-left: auto; overflow-x:hidden; overflow:auto; width:320px; height:300px;" frameborder=0 framespacing=0 marginheight=0 marginwidth=0 vspace=0></iframe>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.js"></script>
 </body>

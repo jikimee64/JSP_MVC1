@@ -1,6 +1,27 @@
 <%--
   Created by IntelliJ IDEA.
   User: wlsgm
+  Date: 2019-12-28
+  Time: 오후 2:09
+  To change this template use File | Settings | File Templates.
+--%>
+<%--
+  Created by IntelliJ IDEA.
+  User: wlsgm
+  Date: 2019-12-26
+  Time: 오후 9:47
+  To change this template use File | Settings | File Templates.
+--%>
+<%--
+  Created by IntelliJ IDEA.
+  User: wlsgm
+  Date: 2019-12-26
+  Time: 오후 9:34
+  To change this template use File | Settings | File Templates.
+--%>
+<%--
+  Created by IntelliJ IDEA.
+  User: wlsgm
   Date: 2019-11-16
   Time: 오후 2:31
   To change this template use File | Settings | File Templates.
@@ -16,6 +37,8 @@
 <%@ page import="java.sql.Statement" %>
 <%@ page import="java.sql.SQLException" %>
 <%@ page import="util.DatabaseUtil" %>
+<%@ page import="bbs.Bbs" %>
+<%@ page import="bbs.BbsDAO" %>
 
 <!DOCTYPE html>
 <html>
@@ -42,26 +65,25 @@
 <%
 
     String userID = null;
-    String userIP1 = null;
-    String userIP2 = null;
-    String userIP3 = null;
-    String userIP4 = null;
+    int bbsID = 0;
 
     if(session.getAttribute("userID") != null) {
         userID = (String) session.getAttribute("userID");
     }
-    if(session.getAttribute("userIP1") != null) {
-        userIP1 = (String) session.getAttribute("userIP1");
+    if (request.getParameter("bbsID") != null) {
+        bbsID = Integer.parseInt(request.getParameter("bbsID"));
     }
-    if(session.getAttribute("userIP2") != null) {
-        userIP2 = (String) session.getAttribute("userIP2");
+    if(bbsID == 0){
+        PrintWriter script = response.getWriter();
+        script.println("<script>");
+        script.println("alert('유효하지 않은 글입니다.');");
+        script.println("location.href = 'bbs.jsp'; ");
+        script.println("</script>");
+        script.close();
     }
-    if(session.getAttribute("userIP3") != null) {
-        userIP3 = (String) session.getAttribute("userIP3");
-    }
-    if(session.getAttribute("userIP4") != null) {
-        userIP4 = (String) session.getAttribute("userIP4");
-    }
+
+    Bbs bbs = new BbsDAO().getBbs(bbsID);
+
     if(userID == null) {
         PrintWriter script = response.getWriter();
         script.println("<script>");
@@ -71,6 +93,7 @@
         script.close();
         return;
     }
+
     boolean emailChecked = false;
     emailChecked = new UserDAO().getUserEmailChecked(userID);
 
@@ -81,26 +104,6 @@
         script.println("</script>");
         script.close();
         return;
-    }
-
-    try (Connection conn = DatabaseUtil.getConnection()) {
-        String sql1 = "select * from CCTV where userID = ?";
-        PreparedStatement pstmt = conn.prepareStatement(sql1);
-
-        Statement stmt = null;
-        pstmt.setString(1, userID);
-        stmt = conn.createStatement();
-        String sql2 = "select * from CCTV where userID = '" + userID + "'";
-        ResultSet rs = stmt.executeQuery(sql2);
-
-        if (rs.next()) {
-            userIP1 = rs.getString("userIP1");
-            userIP2 = rs.getString("userIP2");
-            userIP3 = rs.getString("userIP3");
-            userIP4 = rs.getString("userIP4");
-        }
-    } catch (SQLException e) {
-        e.printStackTrace();
     }
 
 %>
@@ -118,8 +121,8 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-            <li class="active"><a href="main.jsp">스트리밍 서비스</a></li>
-           <li><a href="bbs.jsp">게시판</a></li>
+            <li><a href="main.jsp">스트리밍 서비스</a></li>
+            <li class="active"><a href="bbs.jsp">게시판</a></li>
         </ul>
         <%
             if(userID == null) {
@@ -155,57 +158,47 @@
         %>
     </div>
 </nav>
+
 <div class="container">
-    <div class="jumbotron">
-        <div class="container">
-            <h1>IoT SSS</h1>
-            <p>IoT 단말기 스트리밍 보안 솔루션</p>
-        </div>
+    <div class="row">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th colspan="3">게시판 글 보기</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td style="width: 20%;">글 제목</td>
+                    <td colspan="2"><%= bbs.getBbsTitle() != null ? bbs.getBbsTitle().replaceAll(" ","&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\n","<br>") : null %></td>
+                </tr>
+                <tr>
+                    <td>작성자</td>
+                    <td colspan="2"><%= bbs.getUserID() %></td>
+                </tr>
+                <tr>
+                    <td>작성일자</td>
+                    <td colspan="2"><%= bbs.getBbsDate().substring(0,11) + bbs.getBbsDate().substring(11,13)+ ":" + bbs.getBbsDate().substring(14,16) %></td>
+                </tr>
+                <tr>
+                    <td>내용</td>
+                    <td colspan="2" style="min-height: 200px; text-align: left"><%= bbs.getBbsContent() != null ? bbs.getBbsContent().replaceAll(" ","&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\n","<br>") : null %></td>
+                </tr>
+                </tbody>
+            </table>
+            <a href="bbs.jsp" class="btn btn-primary">목록</a>
+        <%
+            if(userID != null && userID.equals(bbs.getUserID())) {
+        %>
+            <a href="boardUpdate.jsp?bbsID=<%= bbsID %>" class="btn btn-primary">수정</a>
+            <a onclick="return confirm('정말로 삭제하시겠습니까?')" href="boardDeleteAction.jsp?bbsID=<%= bbsID %>" class="btn btn-primary">삭제</a>
+        <%
+            }
+        %>
     </div>
 </div>
 
-<div class="container">
-    <div class="jumbotron">
-        <h1><%=userID %>의 ES100V Mini</h1>
-        <br />
-        <br />
 
-        <div class="row" style="text-align:center;">
-            <div class="col-md-6 col-lg-6">
-                <div class="jumbotron" style="padding: 30px;">
-                    <p style="font-weight: bold">Flask Test<br/>
-                        <br/>
-                        <iframe src="http://localhost:5000/" style="  display: block; margin-right: auto; margin-left: auto; overflow-x:hidden; overflow:auto; width:320px; height:300px;" frameborder=0 framespacing=0 marginheight=0 marginwidth=0 vspace=0></iframe>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-6">
-                <div class="jumbotron" style="padding: 30px;">
-                    <p style="font-weight: bold"><%=userIP1 %><br/>
-                        <br/>
-                        <iframe src="http://<%=userIP1 %>:6611/web/admin.html"  style="  display: block; margin-right: auto; margin-left: auto; overflow-x:hidden; overflow:auto; width:320px; height:300px;" frameborder=0 framespacing=0 marginheight=0 marginwidth=0 vspace=0></iframe>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-6">
-                <div class="jumbotron" style="padding: 30px;">
-                    <p style="font-weight: bold"><%=userIP2 %><br/>
-                        <br/>
-                        <iframe src="http://<%=userIP2 %>:6611/web/admin.html"  style="  display: block; margin-right: auto; margin-left: auto; overflow-x:hidden; overflow:auto; width:320px; height:300px;" frameborder=0 framespacing=0 marginheight=0 marginwidth=0 vspace=0></iframe>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-6">
-                <div class="jumbotron" style="padding: 30px;">
-                    <p style="font-weight: bold"><%=userIP3 %><br/>
-                        <br/>
-                        <iframe src="http://<%=userIP3 %>:6611/web/admin.html"  style="  display: block; margin-right: auto; margin-left: auto; overflow-x:hidden; overflow:auto; width:320px; height:300px;" frameborder=0 framespacing=0 marginheight=0 marginwidth=0 vspace=0></iframe>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.js"></script>
 </body>

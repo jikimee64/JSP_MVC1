@@ -112,12 +112,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="mainAction.jsp">IoT SSS</a>
+        <a class="navbar-brand" href="main.jsp">IoT SSS</a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-            <li><a href="mainAction.jsp">스트리밍 서비스</a></li>
-            <li><a href="info.jsp">대시보드</a></li>
+            <li><a href="main.jsp">스트리밍 서비스</a></li>
+            <li><a href="bbs.jsp">게시판</a></li>
         </ul>
         <%
             if(userID == null) {

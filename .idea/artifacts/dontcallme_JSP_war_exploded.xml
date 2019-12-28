@@ -7,6 +7,15 @@
         <element id="directory" name="classes">
           <element id="module-output" name="dontcallme_JSP" />
         </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/../../lib/activation.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../lib/commons-codec-1.9.jar" />
+          <element id="library" level="project" name="JAX-WS-Apache Axis" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../lib/mail.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../lib/mysql-connector-java-8.0.16.jar" />
+          <element id="file-copy" path="D:/소프트웨어/학업 소프트웨어/apache-tomcat-9.0.27/lib/servlet-api.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../../lib/simplecaptcha-1.2.1.jar" />
+        </element>
       </element>
     </root>
   </artifact>
