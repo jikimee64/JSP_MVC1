@@ -7,50 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc3481c4-f097-4017-b413-a9fdcd196943" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/bbs/Bbs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bbs/BbsDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/bbs.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/boardDeleteAction.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/boardUpdate.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/boardUpdateAction.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/view.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/write.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/writeAction.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/dontcallme_JSP_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/dontcallme_JSP_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/WEB-INF/classes/META-INF/dontcallme_JSP.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/WEB-INF/server-config.wsdd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/css/bootstrap-theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/css/custom.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/emailCheckAction.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/emailSendAction.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/emailSendConfirm.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/images/cctv.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/info.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/join.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/joinAction.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/js/npm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/login.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/loginAction.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/logoutAction.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/main.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/removeAction.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/update.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/updateAction.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/info.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/join.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/join.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/update.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -236,7 +193,7 @@
       <workItem from="1573914461199" duration="575000" />
       <workItem from="1574424575725" duration="652000" />
       <workItem from="1577363235788" duration="7178000" />
-      <workItem from="1577504607699" duration="10189000" />
+      <workItem from="1577504607699" duration="10622000" />
     </task>
     <servers />
   </component>
