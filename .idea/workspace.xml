@@ -7,7 +7,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc3481c4-f097-4017-b413-a9fdcd196943" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/cos.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/javax_servlet_javax_servlet_api_4_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_apache_tomcat_servlet_api_6_0_53.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/servlet_api.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/tomcat_servlet_4_1_36.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/file/FileDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/fileDownload.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/dontcallme_JSP_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/dontcallme_JSP_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dontcallme_JSP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/dontcallme_JSP.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/WEB-INF/classes/bbs/Bbs.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/WEB-INF/classes/bbs/Bbs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/WEB-INF/classes/bbs/BbsDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/WEB-INF/classes/bbs/BbsDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/bbs.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/bbs.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/boardUpdate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/boardUpdate.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/boardUpdateAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/boardUpdateAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/view.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/write.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/write.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/writeAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/writeAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dontcallme_JSP/bbs/Bbs.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dontcallme_JSP/bbs/Bbs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dontcallme_JSP/bbs/BbsDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dontcallme_JSP/bbs/BbsDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bbs/Bbs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bbs/Bbs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bbs/BbsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bbs/BbsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/bbs.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/bbs.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/boardUpdate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/boardUpdate.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/boardUpdateAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/boardUpdateAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/view.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/write.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/write.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/writeAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/writeAction.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,10 +67,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="dontcallme_jsp(mvc1)" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/소프트웨어/학업 소프트웨어/apache-tomcat-9.0.27/lib/jsp-api.jar!/" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.16699219" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -194,6 +229,8 @@
       <workItem from="1574424575725" duration="652000" />
       <workItem from="1577363235788" duration="7178000" />
       <workItem from="1577504607699" duration="10622000" />
+      <workItem from="1577682096877" duration="10721000" />
+      <workItem from="1577713196304" duration="6427000" />
     </task>
     <servers />
   </component>

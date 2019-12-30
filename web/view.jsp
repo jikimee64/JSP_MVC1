@@ -184,6 +184,11 @@
                     <td>내용</td>
                     <td colspan="2" style="min-height: 200px; text-align: left"><%= bbs.getBbsContent() != null ? bbs.getBbsContent().replaceAll(" ","&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\n","<br>") : null %></td>
                 </tr>
+                <tr>
+                    <td>첨부파일</td>
+                    <td colspan="2"><%= bbs.getFileName() != null ? bbs.getFileName() : "" %></td>
+                </tr>
+
                 </tbody>
             </table>
             <a href="bbs.jsp" class="btn btn-primary">목록</a>
@@ -195,6 +200,7 @@
         <%
             }
         %>
+        <a href="fileDownload.jsp?bbsID=<%= bbsID %>" class="btn btn-primary">파일다운</a>
     </div>
 </div>
 

@@ -55,8 +55,8 @@ public class BbsDAO {
         return -1;
     }
 
-    public int write(String bbsTitle, String userID, String bbsContent) {
-        String SQL = "INSERT INTO BBS VALUES(?,?,?,?,?,?)";
+    public int write(String bbsTitle, String userID, String bbsContent, String fileName) {
+        String SQL = "INSERT INTO BBS VALUES(?,?,?,?,?,?,?)";
         Connection conn = null;
         PreparedStatement pstmt = null;
         try {
@@ -67,7 +67,8 @@ public class BbsDAO {
             pstmt.setString(3, userID);
             pstmt.setString(4, getDate());
             pstmt.setString(5, bbsContent);
-            pstmt.setInt(6, 1);
+            pstmt.setString(6, fileName);
+            pstmt.setInt(7, 1);
             return pstmt.executeUpdate();
         } catch(SQLException e) {
             System.err.println("write SQLException error");
@@ -96,7 +97,8 @@ public class BbsDAO {
                 bbs.setUserID(rs.getString(3));
                 bbs.setBbsDate(rs.getString(4));
                 bbs.setBbsContent(rs.getString(5));
-                bbs.setBbsAvailable(rs.getInt(6));
+                bbs.setFileName(rs.getString(6));
+                bbs.setBbsAvailable(rs.getInt(7));
                 list.add(bbs);
             }
         } catch(SQLException e) {
@@ -148,7 +150,8 @@ public class BbsDAO {
                 bbs.setUserID(rs.getString(3));
                 bbs.setBbsDate(rs.getString(4));
                 bbs.setBbsContent(rs.getString(5));
-                bbs.setBbsAvailable(rs.getInt(6));
+                bbs.setFileName(rs.getString(6));
+                bbs.setBbsAvailable(rs.getInt(7));
                 return bbs;
             }
         } catch(SQLException e) {
@@ -160,8 +163,8 @@ public class BbsDAO {
         return null;
     }
 
-    public int update(int bbsID, String bbsTitle, String bbsContent) {
-        String SQL = "UPDATE BBS SET bbsTitle = ?, bbsContent = ? WHERE bbsID = ?";
+    public int update(int bbsID, String bbsTitle, String bbsContent, String fileName) {
+        String SQL = "UPDATE BBS SET bbsTitle = ?, bbsContent = ?, fileName = ? WHERE bbsID = ?";
         Connection conn = null;
         PreparedStatement pstmt = null;
         try {
@@ -169,7 +172,8 @@ public class BbsDAO {
             pstmt = conn.prepareStatement(SQL);
             pstmt.setString(1, bbsTitle);
             pstmt.setString(2, bbsContent);
-            pstmt.setInt(3, bbsID);
+            pstmt.setString(3, fileName);
+            pstmt.setInt(4, bbsID);
             return pstmt.executeUpdate();
         } catch(SQLException e) {
             System.err.println("Update SQLException error");
@@ -179,6 +183,7 @@ public class BbsDAO {
         }
         return -1;
     }
+
 
     public int delete(int bbsID) {
         String SQL = "DELETE FROM BBS WHERE bbsID = ?";
@@ -197,6 +202,7 @@ public class BbsDAO {
         }
         return -1;
     }
+
 
 
 

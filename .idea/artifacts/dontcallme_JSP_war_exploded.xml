@@ -15,6 +15,11 @@
           <element id="file-copy" path="$PROJECT_DIR$/../../lib/mysql-connector-java-8.0.16.jar" />
           <element id="file-copy" path="D:/소프트웨어/학업 소프트웨어/apache-tomcat-9.0.27/lib/servlet-api.jar" />
           <element id="file-copy" path="$PROJECT_DIR$/../../lib/simplecaptcha-1.2.1.jar" />
+          <element id="library" level="project" name="cos" />
+          <element id="library" level="project" name="javax.servlet:javax.servlet-api:4.0.1" />
+          <element id="library" level="project" name="org.apache.tomcat:servlet-api:6.0.53" />
+          <element id="library" level="project" name="tomcat:servlet:4.1.36" />
+          <element id="library" level="project" name="servlet-api" />
         </element>
       </element>
     </root>

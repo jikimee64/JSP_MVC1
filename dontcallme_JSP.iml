@@ -78,5 +78,10 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="cos" level="project" />
+    <orderEntry type="library" name="javax.servlet:javax.servlet-api:4.0.1" level="project" />
+    <orderEntry type="library" name="tomcat:servlet:4.1.36" level="project" />
+    <orderEntry type="library" name="org.apache.tomcat:servlet-api:6.0.53" level="project" />
+    <orderEntry type="library" name="servlet-api" level="project" />
   </component>
 </module>

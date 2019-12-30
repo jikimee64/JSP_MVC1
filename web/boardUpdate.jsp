@@ -171,7 +171,7 @@
 
 <div class="container">
     <div class="row">
-        <form method="post" action="boardUpdateAction.jsp?bbsID=<%= bbsID%>">
+        <form method="post" action="boardUpdateAction.jsp?bbsID=<%= bbsID%>"  enctype="multipart/form-data">
             <table class="table table-striped">
                 <thead>
                 <tr>
@@ -184,6 +184,9 @@
                 </tr>
                  <tr>
                     <td><textarea class="form-control" placeholder="글 내용" name="bbsContent" maxlength="2048" style="height: 350px;"><%=bbs.getBbsContent()%></textarea></td>
+                </tr>
+                <tr>
+                    <td><input type="file" name="fileName"></td>
                 </tr>
                 </tbody>
             </table>

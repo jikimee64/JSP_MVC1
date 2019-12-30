@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="org.apache.tomcat:servlet-api:6.0.53" type="repository">
+    <properties maven-id="org.apache.tomcat:servlet-api:6.0.53" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/servlet-api/6.0.53/servlet-api-6.0.53.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

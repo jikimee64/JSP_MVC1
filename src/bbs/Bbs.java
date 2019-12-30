@@ -8,6 +8,7 @@ public class Bbs {
     private String bbsDate;
     private String bbsContent;
     private int bbsAvailable;
+    private String fileName;
 
     public String getUserID() {
         return userID;
@@ -55,6 +56,14 @@ public class Bbs {
 
     public void setBbsAvailable(int bbsAvailable) {
         this.bbsAvailable = bbsAvailable;
+    }
+
+    public String getFileName() {
+        return fileName;
+    }
+
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
     }
 
 

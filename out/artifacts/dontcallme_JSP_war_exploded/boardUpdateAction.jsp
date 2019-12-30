@@ -17,6 +17,8 @@
 <%@ page import="bbs.BbsDAO" %>
 <%@ page import="bbs.Bbs" %>
 <%@ page import="java.io.PrintWriter" %>
+<%@ page import="com.oreilly.servlet.MultipartRequest" %>
+<%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy" %>
 <% request.setCharacterEncoding("UTF-8"); %>
 
 <!DOCTYPE html>
@@ -28,21 +30,33 @@
 <body>
 <%
 
+    String directory = application.getRealPath("/upload");
+    int maxSize = 1024 * 1024 * 100;
+    String encoding = "UTF-8";
+
+    MultipartRequest multipartRequest = new MultipartRequest(request, directory, maxSize, encoding,
+            new DefaultFileRenamePolicy());
+
+
+    String fileTitle = multipartRequest.getParameter("bbsTitle");
+    String fileContent = multipartRequest.getParameter("bbsContent");
+    String fileName = multipartRequest.getOriginalFileName("fileName");
+
     //==========게시물작성동작==========
     //세션관련 오류 처리
     String userID = null;
-    String bbsTitle = null;
-    String bbsContent = null;
+//    String bbsTitle = null;
+//    String bbsContent = null;
     int bbsID = 0;
     if(session.getAttribute("userID") != null) {
         userID = (String) session.getAttribute("userID");
     }
-    if(request.getParameter("bbsTitle") != null) {
-        bbsTitle= request.getParameter("bbsTitle");
-    }
-    if(request.getParameter("bbsContent") != null) {
-        bbsContent = request.getParameter("bbsContent");
-    }
+//    if(request.getParameter("bbsTitle") != null) {
+//        bbsTitle= request.getParameter("bbsTitle");
+//    }
+//    if(request.getParameter("bbsContent") != null) {
+//        bbsContent = request.getParameter("bbsContent");
+//    }
     if (request.getParameter("bbsID") != null) {
         bbsID = Integer.parseInt(request.getParameter("bbsID"));
     }
@@ -73,8 +87,8 @@
     } else {
         //게시판관련 오류 처리
 //        request.getParameter("bbsTitle") : 이거 넣어도 가능
-        if (bbsTitle == null || bbsContent == null ||
-                bbsTitle.equals("") || bbsContent.equals("")) {
+        if (fileTitle == null || fileContent == null ||
+                fileTitle.equals("") || fileContent.equals("")) {
             PrintWriter script = response.getWriter();
             script.println("<script>");
             script.println("alert('입력이 안 된 사항이 있습니다.')");
@@ -82,7 +96,11 @@
             script.println("</script>");
         } else {
             BbsDAO bbsDAO = new BbsDAO();
-            int result = bbsDAO.update(bbsID, request.getParameter("bbsTitle") != null ? request.getParameter("bbsTitle") : null , request.getParameter("bbsContent") != null ? request.getParameter("bbsContent") : null );
+//            int result = bbsDAO.update(bbsID, request.getParameter("fileTitle") != null ? request.getParameter("fileTitle") : null , request.getParameter("fileContent") != null ? request.getParameter("fileContent") : null,
+//                    request.getParameter("fileName") != null ? request.getParameter("fileName") : null );
+
+            int result = bbsDAO.update(bbsID, fileTitle != null ? fileTitle : null ,  fileContent != null ? fileContent : null,
+                    fileName != null ? fileName : null);
             if (result == -1) {
                 PrintWriter script = response.getWriter();
                 script.println("<script>");
