@@ -7,34 +7,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc3481c4-f097-4017-b413-a9fdcd196943" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/cos.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/javax_servlet_javax_servlet_api_4_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/org_apache_tomcat_servlet_api_6_0_53.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/servlet_api.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/tomcat_servlet_4_1_36.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/file/FileDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/fileDownload.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/dontcallme_JSP_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/dontcallme_JSP_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/comm/Comm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/comm/CommDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/commentAction.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/commentDeleteAction.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dontcallme_JSP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/dontcallme_JSP.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/WEB-INF/classes/bbs/Bbs.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/WEB-INF/classes/bbs/Bbs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/WEB-INF/classes/bbs/BbsDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/WEB-INF/classes/bbs/BbsDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/bbs.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/bbs.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/boardUpdate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/boardUpdate.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/boardUpdateAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/boardUpdateAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/joinAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/joinAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/loginAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/loginAction.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/view.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/write.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/write.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/writeAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/writeAction.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dontcallme_JSP/bbs/Bbs.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dontcallme_JSP/bbs/Bbs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dontcallme_JSP/bbs/BbsDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dontcallme_JSP/bbs/BbsDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bbs/Bbs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bbs/Bbs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bbs/BbsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bbs/BbsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/bbs.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/bbs.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dontcallme_JSP/META-INF/dontcallme_JSP.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/boardUpdate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/boardUpdate.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/boardUpdateAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/boardUpdateAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/joinAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/joinAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/loginAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/loginAction.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/view.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/write.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/write.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/writeAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/writeAction.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +65,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="D:/소프트웨어/학업 소프트웨어/apache-tomcat-9.0.27/lib/jsp-api.jar!/" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.16699219" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -113,10 +99,9 @@
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.27" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.27" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8001/" />
       <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8" />
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
-      <option name="UPDATING_POLICY" value="restart-server" />
+      <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <deployment>
         <artifact name="dontcallme_JSP:war exploded">
           <settings>
@@ -231,6 +216,8 @@
       <workItem from="1577504607699" duration="10622000" />
       <workItem from="1577682096877" duration="10721000" />
       <workItem from="1577713196304" duration="6427000" />
+      <workItem from="1577760104381" duration="10014000" />
+      <workItem from="1577770506738" duration="2028000" />
     </task>
     <servers />
   </component>

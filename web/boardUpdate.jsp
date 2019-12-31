@@ -50,16 +50,6 @@
     <title>캡스톤디자인프로젝트</title>
 
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148884809-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-148884809-2');
-    </script>
-
 </head>
 <body>
 <%
