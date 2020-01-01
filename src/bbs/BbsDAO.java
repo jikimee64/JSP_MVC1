@@ -56,7 +56,7 @@ public class BbsDAO {
     }
 
     public int write(String bbsTitle, String userID, String bbsContent, String fileName) {
-        String SQL = "INSERT INTO BBS VALUES(?,?,?,?,?,?,?)";
+        String SQL = "INSERT INTO BBS VALUES(?,?,?,?,?,?,?,0)";
         Connection conn = null;
         PreparedStatement pstmt = null;
         try {
@@ -79,8 +79,10 @@ public class BbsDAO {
         return -1;
     }
 
-    public ArrayList<Bbs> getList(int pageNumber) {
-        String SQL = "SELECT * FROM BBS WHERE bbsID < ? AND bbsAvailable = 1 ORDER BY bbsID DESC LIMIT 10";
+    public ArrayList<Bbs> getList( String search, int pageNumber) {
+        String SQL = "SELECT * FROM BBS WHERE bbsID < ? AND bbsAvailable = 1 and " +
+                "CONCAT(bbsTitle, bbsContent) LIKE ? " +
+                "ORDER BY bbsID DESC LIMIT 10";
         ArrayList<Bbs> list = new ArrayList<Bbs>();
         Connection conn = null;
         PreparedStatement pstmt = null;
@@ -89,6 +91,7 @@ public class BbsDAO {
             conn = DatabaseUtil.getConnection();
             pstmt = conn.prepareStatement(SQL);
             pstmt.setInt(1, getNext() - (pageNumber - 1) * 10);
+            pstmt.setString(2, "%" + search + "%");
             rs = pstmt.executeQuery();
             while(rs.next()) {
                 Bbs bbs = new Bbs();
@@ -99,6 +102,7 @@ public class BbsDAO {
                 bbs.setBbsContent(rs.getString(5));
                 bbs.setFileName(rs.getString(6));
                 bbs.setBbsAvailable(rs.getInt(7));
+                bbs.setLikeCount(rs.getInt(8));
                 list.add(bbs);
             }
         } catch(SQLException e) {
@@ -152,6 +156,7 @@ public class BbsDAO {
                 bbs.setBbsContent(rs.getString(5));
                 bbs.setFileName(rs.getString(6));
                 bbs.setBbsAvailable(rs.getInt(7));
+                bbs.setLikeCount(rs.getInt(8));
                 return bbs;
             }
         } catch(SQLException e) {
@@ -201,6 +206,27 @@ public class BbsDAO {
             if(pstmt != null) try {pstmt.close();} catch (SQLException e) {System.err.println("Login SQLException error");}
         }
         return -1;
+    }
+
+
+    public int like(String bbsID) {
+        String SQL = "UPDATE BBS SET likeCount = likeCount + 1 WHERE bbsID = ? ";
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        try {
+            conn = DatabaseUtil.getConnection();
+            pstmt = conn.prepareStatement(SQL); //데이터를 실제로 넣어줄 수 있는 역할
+            pstmt.setInt(1, Integer.parseInt(bbsID));
+            return pstmt.executeUpdate();
+        }catch (Exception e) {
+            System.err.println("like SQLException error");
+        } finally {
+            if(conn != null) try {conn.close();} catch (SQLException e) {e.printStackTrace();}
+            if(pstmt != null) try {pstmt.close();} catch (SQLException e) {e.printStackTrace();}
+            if(rs != null) try {rs.close();} catch (SQLException e) {e.printStackTrace();}
+        }
+        return -1; //데이터베이스 오류
     }
 
 

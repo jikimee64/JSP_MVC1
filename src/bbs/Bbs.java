@@ -9,6 +9,15 @@ public class Bbs {
     private String bbsContent;
     private int bbsAvailable;
     private String fileName;
+    int likeCount;
+
+    public int getLikeCount() {
+        return likeCount;
+    }
+
+    public void setLikeCount(int likeCount) {
+        this.likeCount = likeCount;
+    }
 
     public String getUserID() {
         return userID;

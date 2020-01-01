@@ -36,15 +36,6 @@
     <link rel="stylesheet" href="css/custom.css">
     <title>캡스톤디자인프로젝트</title>
 
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148884809-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-148884809-2');
-    </script>
     <style>
         a, a:hover{
             color:#e3e3e3;
@@ -55,9 +46,13 @@
 <body>
 <%
     String userID = null;
+    String search = "";
     int pageNumber = 1;
     if(session.getAttribute("userID") != null) {
         userID = (String) session.getAttribute("userID");
+    }
+    if(request.getParameter("search") != null) {
+        search = request.getParameter("search");
     }
     if(request.getParameter("pageNumber") != null) {
         pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
@@ -113,6 +108,7 @@
                 </ul>
             </li>
         </ul>
+
         <%
         } else {
         %>
@@ -128,9 +124,15 @@
                 </ul>
             </li>
         </ul>
+
         <%
             }
         %>
+        <form action="./bbs.jsp" method="get" style="position: absolute; top:50%; left:25%; transform:translateY(-50%);" class="form-inline my-2 my-lg-0">
+            <input type="text"  style="color:black;"
+                   name="search" class="form-control mr-sm-2" type="search" placeholder="내용을 입력하세요." aria-label="Search">
+            <button class="btn btn-success" type="submit">검색</button>
+        </form>
     </div>
 </nav>
 
@@ -143,6 +145,7 @@
                 <th>제목</th>
                 <th>작성자</th>
                 <th>작성일</th>
+                <th>추천</th>
                 <%--                    <th style="background-color:#eeeeee; text-align:center;">번호</th>--%>
                 <%--                    <th style="background-color:#eeeeee; text-align:center;">제목</th>--%>
                 <%--                    <th style="background-color:#eeeeee; text-align:center;">작성자</th>--%>
@@ -153,7 +156,7 @@
 
             <%
                 BbsDAO bbsDAO = new BbsDAO();
-                ArrayList<Bbs> list = bbsDAO.getList(pageNumber);
+                ArrayList<Bbs> list = bbsDAO.getList(search, pageNumber);
                 for(int i = 0; i < list.size(); i++) {
             %>
             <tr>
@@ -163,6 +166,7 @@
                 </td>
                 <td><%= list.get(i).getUserID() %></td>
                 <td><%= list.get(i).getBbsDate().substring(0,11) + list.get(i).getBbsDate().substring(11,13)+ ":" + list.get(i).getBbsDate().substring(14,16) %></td>
+                <td><%= list.get(i).getLikeCount() %></td>
             </tr>
             <%
                 }

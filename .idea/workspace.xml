@@ -7,20 +7,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc3481c4-f097-4017-b413-a9fdcd196943" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/comm/Comm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/comm/CommDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/commentAction.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/commentDeleteAction.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/cos.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/likey/LikeyDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/likey/LikeyDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/likeAction.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/reportAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/cos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/cos.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/joinAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/joinAction.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/loginAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/loginAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/WEB-INF/classes/bbs/Bbs.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/WEB-INF/classes/bbs/Bbs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/WEB-INF/classes/bbs/BbsDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/WEB-INF/classes/bbs/BbsDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/bbs.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/bbs.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/view.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dontcallme_JSP/META-INF/dontcallme_JSP.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/boardUpdate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/boardUpdate.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/joinAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/joinAction.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/loginAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/loginAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dontcallme_JSP/bbs/Bbs.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dontcallme_JSP/bbs/Bbs.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dontcallme_JSP/bbs/BbsDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dontcallme_JSP/bbs/BbsDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bbs/Bbs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bbs/Bbs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bbs/BbsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bbs/BbsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/file/FileDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/bbs.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/bbs.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/view.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/write.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/write.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,8 +36,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="jsf" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -64,25 +68,26 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="D:/소프트웨어/학업 소프트웨어/apache-tomcat-9.0.27/lib/jsp-api.jar!/" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web/js" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.16699219" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\kimwoocheol\PersonelStudy\IntelliJ\dontcallme_JSP(Portfolio)\web" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\kimwoocheol\PersonelStudy\IntelliJ\dontcallme_JSP(MVC1)\web\js" />
+      <recent name="D:\kimwoocheol\PersonelStudy\IntelliJ\dontcallme_JSP(MVC1)\web\css" />
+      <recent name="D:\kimwoocheol\PersonelStudy\IntelliJ\dontcallme_JSP(Portfolio)\lib" />
+      <recent name="D:\kimwoocheol\PersonelStudy\IntelliJ\dontcallme_JSP\src\user" />
+      <recent name="D:\kimwoocheol\PersonelStudy\IntelliJ\dontcallme_JSP\src\example" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="util" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\kimwoocheol\PersonelStudy\IntelliJ\dontcallme_JSP(Portfolio)\lib" />
-      <recent name="D:\kimwoocheol\PersonelStudy\IntelliJ\dontcallme_JSP\src\user" />
-      <recent name="D:\kimwoocheol\PersonelStudy\IntelliJ\dontcallme_JSP\src\example" />
-      <recent name="D:\kimwoocheol\PersonelStudy\IntelliJ\dontcallme_JSP\web\images" />
-      <recent name="D:\kimwoocheol\PersonelStudy\IntelliJ\dontcallme_JSP\web\fonts" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\kimwoocheol\PersonelStudy\IntelliJ\dontcallme_JSP(MVC1)\web\css" />
+      <recent name="D:\kimwoocheol\PersonelStudy\IntelliJ\dontcallme_JSP(Portfolio)\web" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -102,6 +107,7 @@
       <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8" />
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="dontcallme_JSP:war exploded">
           <settings>
@@ -217,7 +223,8 @@
       <workItem from="1577682096877" duration="10721000" />
       <workItem from="1577713196304" duration="6427000" />
       <workItem from="1577760104381" duration="10014000" />
-      <workItem from="1577770506738" duration="2028000" />
+      <workItem from="1577770506738" duration="3408000" />
+      <workItem from="1577848283604" duration="7915000" />
     </task>
     <servers />
   </component>

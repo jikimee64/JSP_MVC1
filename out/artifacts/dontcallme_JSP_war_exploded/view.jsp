@@ -161,6 +161,7 @@
                 <td colspan="2"><%= bbs.getFileName() != null ? bbs.getFileName() : "" %></td>
             </tr>
 
+
             </tbody>
         </table>
 
@@ -232,7 +233,48 @@
         <%
             }
         %>
+        <%
+            if(bbs.getFileName() != null) {
+        %>
         <a href="fileDownload.jsp?bbsID=<%= bbsID %>" class="btn btn-primary">파일다운</a>
+        <%
+            }
+        %>
+        <a onclick="return confirm('추천하시겠습니까?')" href="./likeAction.jsp?bbsID=<%= bbs.getBbsID() %>"  class="btn btn-primary">추천</a>
+        <a href="#reportModal" class="btn btn-danger ml-1 mt-2" data-toggle="modal">신고</a>
+    </div>
+</div>
+
+
+
+
+<!-- 신고 -->
+<div class="modal fade" id="reportModal" tabindex="-1" role="dialog" aria-labelledy="modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modal">신고하기</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="./reportAction.jsp?bbsID=<%= bbs.getBbsID() %>" method="post">
+                    <div class="form-group">
+                        <label>신고 제목</label> <input type="text" name="reportTitle" class="form-control" maxlength="30" style="color:black";>
+                    </div>
+                    <div class="form-group">
+                        <label>신고 내용</label>
+                        <textarea name="reportContent" class="form-control" maxlength="2048" style="height: 180px; color:black"></textarea>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                        <button type="submit" class="btn btn-danger">신고하기</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 
