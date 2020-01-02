@@ -24,5 +24,5 @@
 1. 플라스크 스트리밍 코드를 동작 시 http://127.0.0.1:5000/ 같은IP 주소 실행
 
 
-<img src="https://user-images.githubusercontent.com/52563841/71667919-62976280-2daa-11ea-9e0b-af5b59fe2099.JPG" width="60%"></img>
+<img src="https://user-images.githubusercontent.com/52563841/71667919-62976280-2daa-11ea-9e0b-af5b59fe2099.JPG" width="60%"></img>  
 2. main.jsp의 173row의 아래를 기준으로 iframe 태그에 IP 주소를 넣어주면 됨
