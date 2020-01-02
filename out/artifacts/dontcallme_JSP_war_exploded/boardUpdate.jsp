@@ -1,44 +1,9 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: wlsgm
-  Date: 2019-12-28
-  Time: 오후 2:47
-  To change this template use File | Settings | File Templates.
---%>
-<%--
-  Created by IntelliJ IDEA.
-  User: wlsgm
-  Date: 2019-12-26
-  Time: 오후 9:47
-  To change this template use File | Settings | File Templates.
---%>
-<%--
-  Created by IntelliJ IDEA.
-  User: wlsgm
-  Date: 2019-12-26
-  Time: 오후 9:34
-  To change this template use File | Settings | File Templates.
---%>
-<%--
-  Created by IntelliJ IDEA.
-  User: wlsgm
-  Date: 2019-11-16
-  Time: 오후 2:31
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
+         pageEncoding="UTF-8" %>
 <%@ page import="java.io.PrintWriter" %>
 <%@ page import="user.UserDAO" %>
 <%@ page import="bbs.Bbs" %>
 <%@ page import="bbs.BbsDAO" %>
-<%@ page import="java.security.GeneralSecurityException" %>
-<%@ page import="java.sql.Connection" %>
-<%@ page import="java.sql.PreparedStatement" %>
-<%@ page import="java.sql.ResultSet" %>
-<%@ page import="java.sql.Statement" %>
-<%@ page import="java.sql.SQLException" %>
-<%@ page import="util.DatabaseUtil" %>
 
 <!DOCTYPE html>
 <html>
@@ -48,8 +13,6 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/custom.css">
     <title>캡스톤디자인프로젝트</title>
-
-
 </head>
 <body>
 <%
@@ -57,14 +20,14 @@
     String userID = null;
     int bbsID = 0;
 
-    if(session.getAttribute("userID") != null) {
+    if (session.getAttribute("userID") != null) {
         userID = (String) session.getAttribute("userID");
     }
     if (request.getParameter("bbsID") != null) {
         bbsID = Integer.parseInt(request.getParameter("bbsID"));
     }
 
-    if(userID == null) {
+    if (userID == null) {
         PrintWriter script = response.getWriter();
         script.println("<script>");
         script.println("alert('로그인을 해주세요.');");
@@ -74,7 +37,7 @@
         return;
     }
 
-    if(bbsID == 0){
+    if (bbsID == 0) {
         PrintWriter script = response.getWriter();
         script.println("<script>");
         script.println("alert('유효하지 않은 글입니다.');");
@@ -84,7 +47,7 @@
     }
 
     Bbs bbs = new BbsDAO().getBbs(bbsID);
-    if(!userID.equals(bbs.getUserID())){
+    if (!userID.equals(bbs.getUserID())) {
         PrintWriter script = response.getWriter();
         script.println("<script>");
         script.println("alert('권한이 없습니다.');");
@@ -97,7 +60,7 @@
     boolean emailChecked = false;
     emailChecked = new UserDAO().getUserEmailChecked(userID);
 
-    if(!emailChecked) {
+    if (!emailChecked) {
         PrintWriter script = response.getWriter();
         script.println("<script>");
         script.println("location.href = 'emailSendConfirm.jsp'; ");
@@ -105,7 +68,6 @@
         script.close();
         return;
     }
-
 %>
 
 <nav class="navbar navbar-default">
@@ -125,7 +87,7 @@
             <li class="active"><a href="bbs.jsp">게시판</a></li>
         </ul>
         <%
-            if(userID == null) {
+            if (userID == null) {
         %>
         <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
@@ -161,7 +123,7 @@
 
 <div class="container">
     <div class="row">
-        <form method="post" action="boardUpdateAction.jsp?bbsID=<%= bbsID%>"  enctype="multipart/form-data">
+        <form method="post" action="boardUpdateAction.jsp?bbsID=<%= bbsID%>" enctype="multipart/form-data">
             <table class="table table-striped">
                 <thead>
                 <tr>
@@ -170,10 +132,12 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <td><input type="text" class="form-control" placeholder="글 제목" name="bbsTitle" maxlength="50" value="<%= bbs.getBbsTitle() %>"></td>
+                    <td><input type="text" class="form-control" placeholder="글 제목" name="bbsTitle" maxlength="50"
+                               value="<%= bbs.getBbsTitle() %>"></td>
                 </tr>
-                 <tr>
-                    <td><textarea class="form-control" placeholder="글 내용" name="bbsContent" maxlength="2048" style="height: 350px;"><%=bbs.getBbsContent()%></textarea></td>
+                <tr>
+                    <td><textarea class="form-control" placeholder="글 내용" name="bbsContent" maxlength="2048"
+                                  style="height: 350px;"><%=bbs.getBbsContent()%></textarea></td>
                 </tr>
                 <tr>
                     <td><input type="file" name="fileName"></td>
@@ -184,7 +148,6 @@
         </form>
     </div>
 </div>
-
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.js"></script>

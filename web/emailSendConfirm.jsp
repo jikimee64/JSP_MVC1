@@ -1,11 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: wlsgm
-  Date: 2019-11-11
-  Time: 오후 2:29
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page import="java.io.PrintWriter" %>
 <!DOCTYPE html>
 <html>
@@ -13,31 +6,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>강의평가 웹사이트</title>
-    <!--  부트스트랩 css 추가하기 -->
     <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <!--  커스텀 CSS 추가하기 -->
     <link rel="stylesheet" href="./css/custom.css">
-
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148884809-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-148884809-2');
-    </script>
-
-
 </head>
 <body>
 <%
     String userID = null;
-    if(session.getAttribute("userID") != null) {
+    if (session.getAttribute("userID") != null) {
         userID = (String) session.getAttribute("userID");
     }
-    if(userID == null) {
+    if (userID == null) {
         PrintWriter script = response.getWriter();
         script.println("<script>");
         script.println("alert('로그인을 해주세요.');");
@@ -46,9 +24,7 @@
         script.close();
         return;
     }
-
 %>
-
 
 <nav class="navbar navbar-default">
     <div class="navbar-header">
@@ -66,7 +42,7 @@
             <li><a href="info.jsp">더 알아보기</a></li>
         </ul>
         <%
-            if(userID == null) {
+            if (userID == null) {
         %>
         <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
@@ -99,28 +75,12 @@
     </div>
 </nav>
 
-
 <section class="container mt-3" style="max-width: 560px;">
     <div class="alert alert-warning mt-4" role="alert">
         이메일 주소 인증을 하셔야 이용 가능합니다. 인증 메일을 받지 못하셨나요?
     </div>
     <a href="emailSendAction.jsp" class="btn btn-primary">인증 메일 다시 받기</a>
 </section>
-
-<!--
-     <div class="container">
-   <div class="col-lg-4"></div>
-   <div class="col-lg-4">
-       <div class="jumbotron" style="padding-top: 20px;">
-           <form method="post" action="loginAction.jsp">
-       이메일 주소 인증을 하셔야 이용 가능합니다. 인증 메일을 받지 못하셨나요?
-           </form>
-       </div>
-       <a href="emailSendAction.jsp" class="btn btn-primary">인증 메일 다시 받기</a>
-   </div>
-   <div class="col-lg-4"></div>
-</div>
--->
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.js"></script>

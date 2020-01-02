@@ -9,7 +9,7 @@ public class DatabaseUtil { //DB와 연동되는 부분을 정의
 		try {
 			String dbURL = "jdbc:mysql://localhost:3306/dontcallme?characterEncoding=UTF-8&serverTimezone=UTC";
 			String dbID = "root";
-			String dbPassword ="rladncjf1!";
+			String dbPassword ="1q2w3e4r1!";
 			Class.forName("com.mysql.jdbc.Driver");
 			return DriverManager.getConnection(dbURL, dbID, dbPassword);
 		} catch(Exception e) {

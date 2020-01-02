@@ -41,27 +41,6 @@ public class UserDAO { //DB와 1대1로 연동되어 DB에 데이터를 기록�
 				return -2; //데이터베이스 오류
 	}
 
-//	public int Hash(UserDTO user) {
-//		String SQL = "INSERT INTO CCTV (userEmailHash) VALUES(?)"; //?는 사용자가 직접 입력한 값
-//		Connection conn = null;
-//		PreparedStatement pstmt = null;
-//		ResultSet rs = null;
-//		try {
-//			conn = DatabaseUtil.getConnection();
-//			pstmt = conn.prepareStatement(SQL); //데이터를 실제로 넣어줄 수 있는 역할
-//			pstmt.setString(1, SHA256.getSHA256(userEmail));
-//			return pstmt.executeUpdate(); //insert문을 실행해서 나온 결과를 반환
-//													   //데이터를 1개 넣었다면 1을 반환
-//		}catch (Exception e) {
-//			e.printStackTrace();
-//		} finally {
-//			if(conn != null) try {conn.close();} catch (SQLException e) {e.printStackTrace();}
-//			if(pstmt != null) try {pstmt.close();} catch (SQLException e) {e.printStackTrace();}
-//			if(rs != null) try {rs.close();} catch (SQLException e) {e.printStackTrace();}
-//		}
-//		return -1; //삽입 실패
-//	}
-
 	public int join(UserDTO user) throws GeneralSecurityException, IOException {
 		String SQL = "INSERT INTO CCTV VALUES(?, ?, ?, ?, ?, false, ?, ?, ?, ?)"; //?는 사용자가 직접 입력한 값
 		Connection conn = null;

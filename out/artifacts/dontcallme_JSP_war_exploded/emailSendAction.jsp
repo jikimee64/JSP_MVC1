@@ -1,11 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: wlsgm
-  Date: 2019-11-11
-  Time: 오후 2:29
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page import="javax.mail.Transport" %>
 <%@ page import="javax.mail.Message" %>
 <%@ page import="javax.mail.Address" %>
@@ -13,22 +6,20 @@
 <%@ page import="javax.mail.internet.MimeMessage" %>
 <%@ page import="javax.mail.Session" %>
 <%@ page import="javax.mail.Authenticator" %>
-<%@ page import="java.util.Properties"%>
-<%@ page import="user.UserDAO"%>
-<%@ page import="util.SHA256"%>
-<%@ page import="util.Gmail"%>
-<%@ page import="java.io.PrintWriter"%>
-<%@ page import="java.security.GeneralSecurityException" %>
+<%@ page import="java.util.Properties" %>
+<%@ page import="user.UserDAO" %>
+<%@ page import="util.SHA256" %>
+<%@ page import="util.Gmail" %>
+<%@ page import="java.io.PrintWriter" %>
 <%
 
     UserDAO userDAO = new UserDAO();
     String userID = null;
-    if(session.getAttribute("userID") != null) {
+    if (session.getAttribute("userID") != null) {
         userID = (String) session.getAttribute("userID");
     }
 
-
-    if(userID == null) {
+    if (userID == null) {
         PrintWriter script = response.getWriter();
         script.println("<script>");
         script.println("alert('로그인을 해주세요.');");
@@ -38,9 +29,8 @@
         return;
     }
 
-
     boolean emailChecked = userDAO.getUserEmailChecked(userID);
-    if(emailChecked == true) {
+    if (emailChecked == true) {
         PrintWriter script = response.getWriter();
         script.println("<script>");
         script.println("alert('이미 인증된 회원입니다.');");
@@ -53,23 +43,20 @@
     final String host = "http://localhost:8001/";
     final String from = "gnv112@naver.com";
     String to = null;
-        to = userDAO.getUserEmail(userID);
+    to = userDAO.getUserEmail(userID);
 
-        if (to == null){
-            PrintWriter script = response.getWriter();
-
-            script.println("<script>");
-            script.println("alert('오류가 발생했습니다..123');");
-            script.println("history.back()");
-            script.println("</script>");
-            script.close();
-        }
-
+    if (to == null) {
+        PrintWriter script = response.getWriter();
+        script.println("<script>");
+        script.println("alert('오류가 발생했습니다..123');");
+        script.println("history.back()");
+        script.println("</script>");
+        script.close();
+    }
 
     String subject = "IoT Streaming Security Solution을 위한 이메일 인증 메일입니다.";
     String content = "다음 링크에 접속하여 이메일 확인을 진행하세요. "
             + "<a href='" + host + "emailCheckAction.jsp?code=" + new SHA256().getSHA256(to) + "'> 이메일 인증하기</a>";
-
 
     //SMTP에 접속하기 위한 정보 기입
     Properties p = new Properties();
@@ -96,7 +83,7 @@
         msg.setContent(content, "text/html;charset=UTF8");
         Transport.send(msg);
 
-    } catch(Exception e) {
+    } catch (Exception e) {
         e.printStackTrace();
         PrintWriter script = response.getWriter();
         script.println("<script>");
@@ -117,21 +104,9 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/custom.css">
     <title>캡스톤디자인프로젝트</title>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148884809-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-148884809-2');
-    </script>
-
 </head>
 
 <body>
-
 <nav class="navbar navbar-default">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed"
@@ -148,7 +123,7 @@
             <li><a href="info.jsp">더 알아보기</a></li>
         </ul>
         <%
-            if(userID == null) {
+            if (userID == null) {
         %>
         <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
@@ -186,21 +161,6 @@
         이메일 주소 인증 메일이 전송되었습니다. 회원가입시 입력했던 이메일에 들어가셔서 인증해주세요.
     </div>
 </section>
-
-<!--
-    <div class="container">
-       <div class="col-lg-4"></div>
-       <div class="col-lg-4">
-           <div class="jumbotron" style="padding-top: 20px;">
-               <form method="post" action="loginAction.jsp">
-                   이메일 주소 인증 메일이 전송되었습니다. 회원가입시 입력했던 이메일에 들어가셔서 인증해주세요.
-               </form>
-           </div>
-       </div>
-       <div class="col-lg-4"></div>
-   </div>
- -->
-
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.js"></script>

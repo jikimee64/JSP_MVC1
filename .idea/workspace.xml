@@ -7,24 +7,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc3481c4-f097-4017-b413-a9fdcd196943" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/cos.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/likey/LikeyDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/likey/LikeyDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/likeAction.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/reportAction.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/cos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/cos.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Flask streamming/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Flask streamming/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Flask streamming/test.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/WEB-INF/classes/bbs/Bbs.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/WEB-INF/classes/bbs/Bbs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/WEB-INF/classes/bbs/BbsDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/WEB-INF/classes/bbs/BbsDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/WEB-INF/classes/user/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/WEB-INF/classes/user/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/WEB-INF/classes/util/DatabaseUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/WEB-INF/classes/util/DatabaseUtil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/bbs.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/bbs.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/view.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dontcallme_JSP/bbs/Bbs.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dontcallme_JSP/bbs/Bbs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dontcallme_JSP/bbs/BbsDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dontcallme_JSP/bbs/BbsDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bbs/Bbs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bbs/Bbs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bbs/BbsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/bbs/BbsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/file/FileDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/boardDeleteAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/boardDeleteAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/boardUpdate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/boardUpdate.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/boardUpdateAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/boardUpdateAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/commentAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/commentAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/commentDeleteAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/commentDeleteAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/emailCheckAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/emailCheckAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/emailSendAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/emailSendAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/emailSendConfirm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/emailSendConfirm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/fileDownload.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/fileDownload.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/info.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/join.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/join.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/joinAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/joinAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/likeAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/likeAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/loginAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/loginAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/logoutAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/logoutAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/dontcallme_JSP_war_exploded/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dontcallme_JSP/user/UserDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dontcallme_JSP/user/UserDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dontcallme_JSP/util/DatabaseUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dontcallme_JSP/util/DatabaseUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/user/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/user/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/DatabaseUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/DatabaseUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/bbs.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/bbs.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/boardDeleteAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/boardDeleteAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/boardUpdate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/boardUpdate.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/boardUpdateAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/boardUpdateAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/commentAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/commentAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/commentDeleteAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/commentDeleteAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/emailCheckAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/emailCheckAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/emailSendAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/emailSendAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/emailSendConfirm.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/emailSendConfirm.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fileDownload.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/fileDownload.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/info.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/join.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/join.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/joinAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/joinAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/likeAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/likeAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/loginAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/loginAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/logoutAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/logoutAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/main.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/removeAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/removeAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/reportAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/reportAction.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/update.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/updateAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/updateAction.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/view.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/write.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/write.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/writeAction.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/writeAction.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -224,7 +261,8 @@
       <workItem from="1577713196304" duration="6427000" />
       <workItem from="1577760104381" duration="10014000" />
       <workItem from="1577770506738" duration="3408000" />
-      <workItem from="1577848283604" duration="7915000" />
+      <workItem from="1577848283604" duration="8692000" />
+      <workItem from="1577968302113" duration="3166000" />
     </task>
     <servers />
   </component>

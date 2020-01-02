@@ -1,21 +1,7 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: wlsgm
-  Date: 2019-12-28
-  Time: 오후 2:09
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
+         pageEncoding="UTF-8" %>
 <%@ page import="java.io.PrintWriter" %>
 <%@ page import="user.UserDAO" %>
-<%@ page import="java.security.GeneralSecurityException" %>
-<%@ page import="java.sql.Connection" %>
-<%@ page import="java.sql.PreparedStatement" %>
-<%@ page import="java.sql.ResultSet" %>
-<%@ page import="java.sql.Statement" %>
-<%@ page import="java.sql.SQLException" %>
-<%@ page import="util.DatabaseUtil" %>
 <%@ page import="bbs.Bbs" %>
 <%@ page import="bbs.BbsDAO" %>
 <%@ page import="comm.CommDAO" %>
@@ -39,13 +25,13 @@
     String userID = null;
     int bbsID = 0;
 
-    if(session.getAttribute("userID") != null) {
+    if (session.getAttribute("userID") != null) {
         userID = (String) session.getAttribute("userID");
     }
     if (request.getParameter("bbsID") != null) {
         bbsID = Integer.parseInt(request.getParameter("bbsID"));
     }
-    if(bbsID == 0){
+    if (bbsID == 0) {
         PrintWriter script = response.getWriter();
         script.println("<script>");
         script.println("alert('유효하지 않은 글입니다.');");
@@ -56,7 +42,7 @@
 
     Bbs bbs = new BbsDAO().getBbs(bbsID);
 
-    if(userID == null) {
+    if (userID == null) {
         PrintWriter script = response.getWriter();
         script.println("<script>");
         script.println("alert('로그인을 해주세요.');");
@@ -69,7 +55,7 @@
     boolean emailChecked = false;
     emailChecked = new UserDAO().getUserEmailChecked(userID);
 
-    if(!emailChecked) {
+    if (!emailChecked) {
         PrintWriter script = response.getWriter();
         script.println("<script>");
         script.println("location.href = 'emailSendConfirm.jsp'; ");
@@ -97,7 +83,7 @@
             <li class="active"><a href="bbs.jsp">게시판</a></li>
         </ul>
         <%
-            if(userID == null) {
+            if (userID == null) {
         %>
         <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
@@ -142,23 +128,29 @@
             <tbody>
             <tr>
                 <td style="width: 20%;">글 제목</td>
-                <td colspan="2"><%= bbs.getBbsTitle() != null ? bbs.getBbsTitle().replaceAll(" ","&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\n","<br>") : null %></td>
+                <td colspan="2"><%= bbs.getBbsTitle() != null ? bbs.getBbsTitle().replaceAll(" ", "&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\n", "<br>") : null %>
+                </td>
             </tr>
             <tr>
                 <td>작성자</td>
-                <td colspan="2"><%= bbs.getUserID() %></td>
+                <td colspan="2"><%= bbs.getUserID() %>
+                </td>
             </tr>
             <tr>
                 <td>작성일자</td>
-                <td colspan="2"><%= bbs.getBbsDate().substring(0,11) + bbs.getBbsDate().substring(11,13)+ ":" + bbs.getBbsDate().substring(14,16) %></td>
+                <td colspan="2"><%= bbs.getBbsDate().substring(0, 11) + bbs.getBbsDate().substring(11, 13) + ":" + bbs.getBbsDate().substring(14, 16) %>
+                </td>
             </tr>
             <tr>
                 <td>내용</td>
-                <td colspan="2" style="min-height: 200px; text-align: left"><%= bbs.getBbsContent() != null ? bbs.getBbsContent().replaceAll(" ","&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\n","<br>") : null %></td>
+                <td colspan="2"
+                    style="min-height: 200px; text-align: left"><%= bbs.getBbsContent() != null ? bbs.getBbsContent().replaceAll(" ", "&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\n", "<br>") : null %>
+                </td>
             </tr>
             <tr>
                 <td>첨부파일</td>
-                <td colspan="2"><%= bbs.getFileName() != null ? bbs.getFileName() : "" %></td>
+                <td colspan="2"><%= bbs.getFileName() != null ? bbs.getFileName() : "" %>
+                </td>
             </tr>
 
 
@@ -178,24 +170,29 @@
             <%
                 CommDAO commDAO = new CommDAO();
                 ArrayList<Comm> list = commDAO.getList(bbsID);
-                for(int i = 0; i < list.size(); i++) {
+                for (int i = 0; i < list.size(); i++) {
             %>
             <tr>
-                <td><%= list.get(i).getUserID() %></td>
-                <td><%= list.get(i).getCommContent().replaceAll(" ","&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\n","<br>") %></td>
+                <td><%= list.get(i).getUserID() %>
+                </td>
+                <td><%= list.get(i).getCommContent().replaceAll(" ", "&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\n", "<br>") %>
+                </td>
                 <%
-                    if(userID != null && userID.equals(userID)) {
+                    if (userID != null && userID.equals(userID)) {
                 %>
 
-                <td><a onclick="return confirm('정말로 삭제하시겠습니까?')" href="commentDeleteAction.jsp?bbsID=<%= bbsID %>&commID=<%=list.get(i).getCommID() %>&<%=list.get(i).getUserID()%>" class="btn btn-primary">삭제</a><td>
-                    <%
+                <td><a onclick="return confirm('정말로 삭제하시겠습니까?')"
+                       href="commentDeleteAction.jsp?bbsID=<%= bbsID %>&commID=<%=list.get(i).getCommID() %>&<%=list.get(i).getUserID()%>"
+                       class="btn btn-primary">삭제</a>
+                <td>
+                        <%
                 }
                 else{
                     %>
                 <td><a href="#" class="btn btn-primary">공사중</a></td>
                 <%
+                        }
                     }
-                }
                 %>
             </tr>
             </tbody>
@@ -211,8 +208,10 @@
                 <tbody>
 
                 <tr>
-                    <td colspan="3"><%= userID %></td>
-                    <td><input type="text" class="form-control" placeholder="댓글 내용" name="commContent" maxlength="200"></td>
+                    <td colspan="3"><%= userID %>
+                    </td>
+                    <td><input type="text" class="form-control" placeholder="댓글 내용" name="commContent" maxlength="200">
+                    </td>
                     <td>
                         <input type="submit" class="btn btn-primary pull-right" value="댓글작성">
                     </td>
@@ -226,26 +225,26 @@
 
         <a href="bbs.jsp" class="btn btn-primary">목록</a>
         <%
-            if(userID != null && userID.equals(bbs.getUserID())) {
+            if (userID != null && userID.equals(bbs.getUserID())) {
         %>
         <a href="boardUpdate.jsp?bbsID=<%= bbsID %>" class="btn btn-primary">수정</a>
-        <a onclick="return confirm('정말로 삭제하시겠습니까?')" href="boardDeleteAction.jsp?bbsID=<%= bbsID %>" class="btn btn-primary">삭제</a>
+        <a onclick="return confirm('정말로 삭제하시겠습니까?')" href="boardDeleteAction.jsp?bbsID=<%= bbsID %>"
+           class="btn btn-primary">삭제</a>
         <%
             }
         %>
         <%
-            if(bbs.getFileName() != null) {
+            if (bbs.getFileName() != null) {
         %>
         <a href="fileDownload.jsp?bbsID=<%= bbsID %>" class="btn btn-primary">파일다운</a>
         <%
             }
         %>
-        <a onclick="return confirm('추천하시겠습니까?')" href="./likeAction.jsp?bbsID=<%= bbs.getBbsID() %>"  class="btn btn-primary">추천</a>
+        <a onclick="return confirm('추천하시겠습니까?')" href="./likeAction.jsp?bbsID=<%= bbs.getBbsID() %>"
+           class="btn btn-primary">추천</a>
         <a href="#reportModal" class="btn btn-danger ml-1 mt-2" data-toggle="modal">신고</a>
     </div>
 </div>
-
-
 
 
 <!-- 신고 -->
@@ -261,11 +260,13 @@
             <div class="modal-body">
                 <form action="./reportAction.jsp?bbsID=<%= bbs.getBbsID() %>" method="post">
                     <div class="form-group">
-                        <label>신고 제목</label> <input type="text" name="reportTitle" class="form-control" maxlength="30" style="color:black";>
+                        <label>신고 제목</label> <input type="text" name="reportTitle" class="form-control" maxlength="30"
+                                                    style="color:black" ;>
                     </div>
                     <div class="form-group">
                         <label>신고 내용</label>
-                        <textarea name="reportContent" class="form-control" maxlength="2048" style="height: 180px; color:black"></textarea>
+                        <textarea name="reportContent" class="form-control" maxlength="2048"
+                                  style="height: 180px; color:black"></textarea>
                     </div>
 
                     <div class="modal-footer">

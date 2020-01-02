@@ -1,21 +1,7 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: wlsgm
-  Date: 2019-12-26
-  Time: 오후 9:47
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
+         pageEncoding="UTF-8" %>
 <%@ page import="java.io.PrintWriter" %>
 <%@ page import="user.UserDAO" %>
-<%@ page import="java.security.GeneralSecurityException" %>
-<%@ page import="java.sql.Connection" %>
-<%@ page import="java.sql.PreparedStatement" %>
-<%@ page import="java.sql.ResultSet" %>
-<%@ page import="java.sql.Statement" %>
-<%@ page import="java.sql.SQLException" %>
-<%@ page import="util.DatabaseUtil" %>
 
 <!DOCTYPE html>
 <html>
@@ -33,11 +19,11 @@
 
     String userID = null;
 
-    if(session.getAttribute("userID") != null) {
+    if (session.getAttribute("userID") != null) {
         userID = (String) session.getAttribute("userID");
     }
 
-    if(userID == null) {
+    if (userID == null) {
         PrintWriter script = response.getWriter();
         script.println("<script>");
         script.println("alert('로그인을 해주세요.');");
@@ -49,7 +35,7 @@
     boolean emailChecked = false;
     emailChecked = new UserDAO().getUserEmailChecked(userID);
 
-    if(!emailChecked) {
+    if (!emailChecked) {
         PrintWriter script = response.getWriter();
         script.println("<script>");
         script.println("location.href = 'emailSendConfirm.jsp'; ");
@@ -77,7 +63,7 @@
             <li class="active"><a href="bbs.jsp">게시판</a></li>
         </ul>
         <%
-            if(userID == null) {
+            if (userID == null) {
         %>
         <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
@@ -126,7 +112,8 @@
                     <td><input type="text" class="form-control" placeholder="글 제목" name="bbsTitle" maxlength="50"></td>
                 </tr>
                 <tr>
-                    <td><textarea class="form-control" placeholder="글 내용" name="bbsContent" maxlength="2048" style="height: 350px;"></textarea></td>
+                    <td><textarea class="form-control" placeholder="글 내용" name="bbsContent" maxlength="2048"
+                                  style="height: 350px;"></textarea></td>
                 </tr>
                 <tr>
                     <td><input type="file" name="fileName"></td>
@@ -138,7 +125,6 @@
 
     </div>
 </div>
-
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.js"></script>

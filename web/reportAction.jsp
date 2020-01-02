@@ -1,11 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: wlsgm
-  Date: 2020-01-01
-  Time: 오후 12:31
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ page import="javax.mail.Transport" %>
 <%@ page import="javax.mail.Message" %>
 <%@ page import="javax.mail.Address" %>
@@ -13,21 +6,21 @@
 <%@ page import="javax.mail.internet.MimeMessage" %>
 <%@ page import="javax.mail.Session" %>
 <%@ page import="javax.mail.Authenticator" %>
-<%@ page import="java.util.Properties"%>
-<%@ page import="user.UserDAO"%>
-<%@ page import="util.SHA256"%>
-<%@ page import="util.Gmail"%>
-<%@ page import="java.io.PrintWriter"%>
+<%@ page import="java.util.Properties" %>
+<%@ page import="user.UserDAO" %>
+<%@ page import="util.SHA256" %>
+<%@ page import="util.Gmail" %>
+<%@ page import="java.io.PrintWriter" %>
 <%
 
     request.setCharacterEncoding("UTF-8");
 
     UserDAO userDAO = new UserDAO();
     String userID = null;
-    if(session.getAttribute("userID") != null) {
+    if (session.getAttribute("userID") != null) {
         userID = (String) session.getAttribute("userID");
     }
-    if(userID == null) {
+    if (userID == null) {
         PrintWriter script = response.getWriter();
         script.println("<script>");
         script.println("alert('로그인을 해주세요.');");
@@ -40,16 +33,16 @@
     String reportTitle = null;
     String reportContent = null;
     int bbsID = 0;
-    if(request.getParameter("reportTitle") != null) {
+    if (request.getParameter("reportTitle") != null) {
         reportTitle = (String) request.getParameter("reportTitle");
     }
-    if(request.getParameter("reportContent") != null) {
+    if (request.getParameter("reportContent") != null) {
         reportContent = (String) request.getParameter("reportContent");
     }
     if (request.getParameter("bbsID") != null) {
         bbsID = Integer.parseInt(request.getParameter("bbsID"));
     }
-    if(reportTitle == null || reportContent == null || reportTitle.equals("") || reportContent.equals("")) {
+    if (reportTitle == null || reportContent == null || reportTitle.equals("") || reportContent.equals("")) {
         PrintWriter script = response.getWriter();
         script.println("<script>");
         script.println("alert('입력이 안 된 사항이 있습니다..');");
@@ -96,7 +89,7 @@
         msg.setContent(content, "text/html;charset=UTF8");
         Transport.send(msg);
 
-    } catch(Exception e) {
+    } catch (Exception e) {
         e.printStackTrace();
         PrintWriter script = response.getWriter();
         script.println("<script>");

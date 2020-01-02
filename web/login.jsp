@@ -1,10 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
-<%@ page import="java.net.URLEncoder" %>
-<%@ page import="java.security.SecureRandom" %>
-<%@ page import="java.math.BigInteger" %>
-<%@ page import="java.net.*, java.io.*" %>
-
+         pageEncoding="UTF-8" %>
 
 <!DOCTYPE html>
 <html>
@@ -17,25 +12,15 @@
 
     <script src='https://www.google.com/recaptcha/api.js'></script>
     <script type="text/javascript"> /* 서브밋 전에 리캡챠 체크 여부 를 확인합니다. */
-    function FormSubmit() { if (grecaptcha.getResponse() == "")
-    {
-        alert("리캡챠를 체크해야 합니다."); return false; } else { return true;
-    }
+    function FormSubmit() {
+        if (grecaptcha.getResponse() == "") {
+            alert("리캡챠를 체크해야 합니다.");
+            return false;
+        } else {
+            return true;
+        }
     }
     </script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148884809-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-148884809-2');
-    </script>
-
-
-
 </head>
 <body>
 <nav class="navbar navbar-default">
@@ -80,10 +65,6 @@
 
 
 <div class="container">
-    <!--
-        <div class="col-lg-4"></div>
-        <div class="col-lg-4">-->
-
     <div class="jumbotron" style="padding-top: 20px;">
         <center>
             <form method="post" action="loginAction.jsp" onsubmit="return FormSubmit();">
@@ -95,18 +76,17 @@
                 <div class="form-group">
                     <input type="password" class="form-control" placeholder="비밀번호" name="userPassword" maxlength="20">
                 </div>
-                <input type="submit" class="btn btn-primary form-control" value="로그인"> <br />
-                <br />
+                <input type="submit" class="btn btn-primary form-control" value="로그인"> <br/>
+                <br/>
                 <div id="html_element" class="g-recaptcha" data-sitekey="6LcUGL4UAAAAAHQDXJveqB7FG3uS9ih1mqa2FNF3"
                      style="margin:0 auto;"></div>
             </form>
         </center>
     </div>
-    <!--
-</div>
-<div class="col-lg-4"></div> -->
+
 </div>
 
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src="js/bootstrap.js"></script></body>
+<script src="js/bootstrap.js"></script>
+</body>
 </html>

@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
+         pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,17 +8,6 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/custom.css">
     <title>캡스톤디자인프로젝트</title>
-
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148884809-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-148884809-2');
-    </script>
-
 </head>
 <body>
 <nav class="navbar navbar-default">
@@ -51,7 +40,6 @@
     </div>
 </nav>
 
-<!-- 이거 추가함 191016_2/3 -->
 <div class="container">
     <div class="jumbotron">
         <div class="container">

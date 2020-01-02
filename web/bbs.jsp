@@ -1,28 +1,7 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: wlsgm
-  Date: 2019-12-26
-  Time: 오후 9:34
-  To change this template use File | Settings | File Templates.
---%>
-<%--
-  Created by IntelliJ IDEA.
-  User: wlsgm
-  Date: 2019-11-16
-  Time: 오후 2:31
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
+         pageEncoding="UTF-8" %>
 <%@ page import="java.io.PrintWriter" %>
 <%@ page import="user.UserDAO" %>
-<%@ page import="java.security.GeneralSecurityException" %>
-<%@ page import="java.sql.Connection" %>
-<%@ page import="java.sql.PreparedStatement" %>
-<%@ page import="java.sql.ResultSet" %>
-<%@ page import="java.sql.Statement" %>
-<%@ page import="java.sql.SQLException" %>
-<%@ page import="util.DatabaseUtil" %>
 <%@ page import="bbs.BbsDAO" %>
 <%@ page import="bbs.Bbs" %>
 <%@ page import="java.util.ArrayList" %>
@@ -35,10 +14,9 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/custom.css">
     <title>캡스톤디자인프로젝트</title>
-
     <style>
-        a, a:hover{
-            color:#e3e3e3;
+        a, a:hover {
+            color: #e3e3e3;
             text-decoration: none;
         }
     </style>
@@ -48,16 +26,16 @@
     String userID = null;
     String search = "";
     int pageNumber = 1;
-    if(session.getAttribute("userID") != null) {
+    if (session.getAttribute("userID") != null) {
         userID = (String) session.getAttribute("userID");
     }
-    if(request.getParameter("search") != null) {
+    if (request.getParameter("search") != null) {
         search = request.getParameter("search");
     }
-    if(request.getParameter("pageNumber") != null) {
+    if (request.getParameter("pageNumber") != null) {
         pageNumber = Integer.parseInt(request.getParameter("pageNumber"));
     }
-    if(userID == null) {
+    if (userID == null) {
         PrintWriter script = response.getWriter();
         script.println("<script>");
         script.println("alert('로그인을 해주세요.');");
@@ -68,7 +46,7 @@
     }
     boolean emailChecked = false;
     emailChecked = new UserDAO().getUserEmailChecked(userID);
-    if(!emailChecked) {
+    if (!emailChecked) {
         PrintWriter script = response.getWriter();
         script.println("<script>");
         script.println("location.href = 'emailSendConfirm.jsp'; ");
@@ -95,7 +73,7 @@
             <li class="active"><a href="bbs.jsp">게시판</a></li>
         </ul>
         <%
-            if(userID == null) {
+            if (userID == null) {
         %>
         <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
@@ -128,9 +106,11 @@
         <%
             }
         %>
-        <form action="./bbs.jsp" method="get" style="position: absolute; top:50%; left:25%; transform:translateY(-50%);" class="form-inline my-2 my-lg-0">
-            <input type="text"  style="color:black;"
-                   name="search" class="form-control mr-sm-2" type="search" placeholder="내용을 입력하세요." aria-label="Search">
+        <form action="./bbs.jsp" method="get" style="position: absolute; top:50%; left:25%; transform:translateY(-50%);"
+              class="form-inline my-2 my-lg-0">
+            <input type="text" style="color:black;"
+                   name="search" class="form-control mr-sm-2" type="search" placeholder="내용을 입력하세요."
+                   aria-label="Search">
             <button class="btn btn-success" type="submit">검색</button>
         </form>
     </div>
@@ -146,10 +126,6 @@
                 <th>작성자</th>
                 <th>작성일</th>
                 <th>추천</th>
-                <%--                    <th style="background-color:#eeeeee; text-align:center;">번호</th>--%>
-                <%--                    <th style="background-color:#eeeeee; text-align:center;">제목</th>--%>
-                <%--                    <th style="background-color:#eeeeee; text-align:center;">작성자</th>--%>
-                <%--                    <th style="background-color:#eeeeee; text-align:center;">작성일</th>--%>
             </tr>
             </thead>
             <tbody>
@@ -157,16 +133,22 @@
             <%
                 BbsDAO bbsDAO = new BbsDAO();
                 ArrayList<Bbs> list = bbsDAO.getList(search, pageNumber);
-                for(int i = 0; i < list.size(); i++) {
+                for (int i = 0; i < list.size(); i++) {
             %>
             <tr>
-                <td><%= list.get(i).getBbsID() %></td>
-                <td>
-                    <a href="view.jsp?bbsID=<%=list.get(i).getBbsID() %>" style="color: white"><%= list.get(i).getBbsTitle().replaceAll(" ","&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\n","<br>") %></a>
+                <td><%= list.get(i).getBbsID() %>
                 </td>
-                <td><%= list.get(i).getUserID() %></td>
-                <td><%= list.get(i).getBbsDate().substring(0,11) + list.get(i).getBbsDate().substring(11,13)+ ":" + list.get(i).getBbsDate().substring(14,16) %></td>
-                <td><%= list.get(i).getLikeCount() %></td>
+                <td>
+                    <a href="view.jsp?bbsID=<%=list.get(i).getBbsID() %>"
+                       style="color: white"><%= list.get(i).getBbsTitle().replaceAll(" ", "&nbsp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll("\n", "<br>") %>
+                    </a>
+                </td>
+                <td><%= list.get(i).getUserID() %>
+                </td>
+                <td><%= list.get(i).getBbsDate().substring(0, 11) + list.get(i).getBbsDate().substring(11, 13) + ":" + list.get(i).getBbsDate().substring(14, 16) %>
+                </td>
+                <td><%= list.get(i).getLikeCount() %>
+                </td>
             </tr>
             <%
                 }
@@ -174,11 +156,12 @@
             </tbody>
         </table>
         <%
-            if(pageNumber != 1) {
+            if (pageNumber != 1) {
         %>
         <a href="bbs.jsp?pageNumber=<%=pageNumber - 1%>" class="btn btn-success btn-arrow-left">이전</a>
         <%
-            } if(bbsDAO.nextPage(pageNumber + 1)) {
+            }
+            if (bbsDAO.nextPage(pageNumber + 1)) {
         %>
         <a href="bbs.jsp?pageNumber=<%=pageNumber + 1%>" class="btn btn-success btn-arrow-right">다음</a>
         <%

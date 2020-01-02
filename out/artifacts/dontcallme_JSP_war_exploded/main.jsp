@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: wlsgm
-  Date: 2019-11-16
-  Time: 오후 2:31
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
 <%@ page import="java.io.PrintWriter" %>
@@ -25,18 +18,6 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/custom.css">
     <title>캡스톤디자인프로젝트</title>
-
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148884809-2"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-148884809-2');
-    </script>
-
 </head>
 <body>
 <%
@@ -203,7 +184,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
